@@ -15,23 +15,22 @@ class App extends Component {
     this.sortList = this.sortList.bind(this);
     this.sortByPrice = this.sortByPrice.bind(this);
     this.state = {
-      list: pivotArr,
-      // list: Array(rowCount)
-      //   .fill()
-      //   .map((val, idx) => {
-      //     return {
-      //       id: idx,
-      //       name: "John Doe",
-      //       tradePrice: Math.floor(Math.random() * 600) + 1,
-      //       image: "http://via.placeholder.com/40",
-      //       text: loremIpsum({
-      //         count: 1,
-      //         units: "sentences",
-      //         sentenceLowerBound: 4,
-      //         sentenceUpperBound: 8
-      //       })
-      //     };
-      //   }),
+      list: Array(rowCount)
+        .fill()
+        .map((val, idx) => {
+          return {
+            id: idx,
+            name: "John Doe",
+            tradePrice: Math.floor(Math.random() * 600) + 1,
+            image: "http://via.placeholder.com/40",
+            text: loremIpsum({
+              count: 1,
+              units: "sentences",
+              sentenceLowerBound: 4,
+              sentenceUpperBound: 8
+            })
+          };
+        }),
       sortDirection: 0
     };
   }
